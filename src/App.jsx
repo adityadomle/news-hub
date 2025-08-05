@@ -1,20 +1,24 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import News from './components/pages/News'
-import { ThemeContext } from './context/ThemeContext'; // ✅ added import
+import { ThemeContext } from './context/ThemeContext';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
-  const { theme } = useContext(ThemeContext); // ✅ now theme will be available
+  const [articles, setArticles] = useState([]);
+  const { theme } = useContext(ThemeContext); // now theme will be available
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
-      <News />
-    </div>
+      <Routes>
+        <Route path='/' element={<News/>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
