@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const App = () => {
   const [articles, setArticles] = useState([])
-  const { theme } = useContext(ThemeContext) 
+  const { theme } = useContext(ThemeContext)
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)

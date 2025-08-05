@@ -39,7 +39,7 @@ const Navbar = ({ setArticles }) => {
             <div className='max-w-7xl mx-auto px-4 py-3 flex items-center justify-between'>
                 {/* Logo */}
                 <Link to={'/'}>
-                    <div className='md:text-2xl text-lg font-bold text-blue-600 dark:text-gray-100 cursor-pointer'>
+                    <div className='md:text-2xl text-lg font-bold text-blue-400 dark:text-gray-100 cursor-pointer'>
                         NewsApp
                     </div>
                 </Link>
@@ -59,7 +59,7 @@ const Navbar = ({ setArticles }) => {
                         <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4' />
                         <input onChange={handleSearch} type="text" placeholder='Search news...' className='md:pl-10 pl-7 w-30 md:w-64 outline-none focus:outline-none' />
                     </div>
-                    <button onClick={toggleTheme} className='bg-gray-200 dark:bg-blue-500 dark:text-gray-200 px-3 py-2 rounded-lg cursor-pointer'>
+                    <button onClick={toggleTheme} className='bg-gray-200 dark:bg-blue-400 dark:text-gray-200 px-3 py-2 rounded-lg cursor-pointer'>
                         {
                             theme === 'light' ? <FaMoon /> : <FaSun />
                         }
